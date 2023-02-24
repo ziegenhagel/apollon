@@ -11,6 +11,7 @@ const selectAsset = (asset: Asset) => {
   selectedAsset.value = asset;
 };
 
+/*
 interface AssetObject {
   src: string;
   thumbSrc: string;
@@ -39,6 +40,7 @@ interface Asset {
   interactions: AssetInteraction[];
   comments: AssetComment[];
 }
+*/
 
 const props = defineProps<{
   assets: Asset[];
