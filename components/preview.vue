@@ -1,4 +1,3 @@
-<script lang="ts" setup></script>
 
 <template>
   <div>
@@ -6,4 +5,6 @@
   </div>
 </template>
 
-<style scoped></style>
+<script lang="ts" setup>
+const selectedAsset = useState<Asset | null>('x');
+</script>

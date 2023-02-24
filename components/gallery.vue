@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-const selectedAsset = ref<Asset | null>(null);
+const selectedAsset = useState<Asset | null>('x');
 const selectAsset = (asset: Asset) => {
   selectedAsset.value = asset;
 };
