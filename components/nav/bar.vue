@@ -3,10 +3,10 @@
 <template>
   <nav>
     <li>
-      <router-link to="/">Home</router-link>
+      <router-link to="/" :class="{ active: $route.path === '/' }">Galerie</router-link>
     </li>
     <li>
-      <router-link to="/about">About</router-link>
+      <router-link to="/preview" :class="{ active: $route.path === '/preview' }">Vorschau</router-link>
     </li>
   </nav>
 </template>
@@ -19,6 +19,7 @@ nav {
   align-items: center;
   background-color: #222;
   color: #fff;
+  border-top: 8px solid #222;
 }
 
 li {
@@ -27,9 +28,19 @@ li {
 
 a {
   display: block;
-  padding: 1rem;
+  padding: .6rem 1rem;
   text-decoration: none;
   color: #fff;
+  transition: background-color 0.2s;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 5px;
 }
 
+a:hover {
+  background-color: #333;
+}
+
+a.active {
+  background-color: #333;
+}
 </style>

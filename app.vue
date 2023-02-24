@@ -1,10 +1,15 @@
 <template>
   <div>
     <NavBar/>
-    <Gallery/>
+    <Gallery :assets="assets"/>
     <Preview/>
   </div>
 </template>
+
+<script setup>
+const assets = useAssets();
+</script>
+
 <style>
 body, html {
   margin: 0;
@@ -14,7 +19,5 @@ body, html {
   background-color: #333;
   color: #fff;
   font-family: "Apple Braille", sans-serif;
-}
-a {
 }
 </style>
