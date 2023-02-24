@@ -66,3 +66,31 @@ svg {
 .asset.selected {
     outline: 2px solid orange;
 }
+
+button {
+    background: #0004;
+    border-radius: 50%;
+    border: 2px outset #000;
+    color: #fff;
+    padding: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0008;
+}
+
+button:active, button.selected {
+    border: 2px outset #fff;
+    background: #000c;
+}
+
+button:not(.enabled) {
+    opacity: .1;
+    cursor: not-allowed;
+}
+
+button > svg {
+    height: 30px;
+    width: 30px;
+}
