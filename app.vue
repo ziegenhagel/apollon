@@ -2,12 +2,13 @@
   <div>
     <NavBar/>
     <Gallery :assets="assets"/>
-    <Preview/>
+    <Preview v-if="route.path == '/preview'"/>
   </div>
 </template>
 
 <script setup>
 const assets = useAssets();
+const route = useRoute();
 </script>
 
 <style>
