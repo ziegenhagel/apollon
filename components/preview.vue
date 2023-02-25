@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
-    <template v-if="selectedAsset == null"><p>No asset selected.</p></template>
+  <div class="preview">
+    <template v-if="selectedAsset == null"><p>Kein Asset ausgewählt.</p></template>
     <template v-else>
       <main>
-        <p>Selected asset: {{ selectedAsset }}</p>
-        <PreviewInteraction/>
+        <PreviewInteraction :asset="selectedAsset" :interaction="selectedInteraction"/>
       </main>
       <aside>
         <PreviewInteractionButton v-for="interaction in interactions" :interaction="interaction"
@@ -24,15 +23,16 @@ const selectInteraction = (interaction: Interaction) => {
 </script>
 
 <style scoped>
-.container {
+.preview {
   display: flex;
   background: green;
   background: #222;
-  padding: 1em;
+  gap: 1em;
 }
 
 main {
   width: auto;
+  padding: 1em;
   flex: 1;
 }
 
@@ -41,6 +41,8 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding: 1em;
+  background: #333;
 }
 
 </style>

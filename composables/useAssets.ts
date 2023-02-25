@@ -1,5 +1,5 @@
 export const useAssets = () => {
-    let id:number = 0
+    let id: number = 0
     return [
         {
             title: 'Sonnenblumen van Gogh',
@@ -23,6 +23,9 @@ export const useAssets = () => {
                     alt: 'Sonnenblumen im Museum, Letze Generation',
                 }
             ],
+            rating: 8,
+            comments: [],
+            interactions: []
         },
         {
             title: 'Mona Lisa',
@@ -41,6 +44,30 @@ export const useAssets = () => {
                     alt: 'Mona Lisa Bild (Mit Bearbeitung)',
                 }
             ],
+            rating: 2,
+            comments: [],
+            interactions: ['zoom', 'highlight']
+        },
+        {
+            title: 'Mona Lisa',
+            type: 'image',
+            objects: [
+                {
+                    src: 'https://shop.ksta.de/de/upload/Ars_mundi_Leonardo_Da_Vinci_Mona_Lisa001.jpg',
+                    alt: 'Mona Lisa Bild',
+                },
+                {
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF2EtB-7IYeSMWKqpZYL-NhIbaROnuAcZWpDGezalmZKLvmw9eWPvUWZ3rhEnzN7rFexI&usqp=CAU',
+                    alt: 'Mona Lisa Bild (Zoom)',
+                },
+                {
+                    src: 'https://i.pinimg.com/originals/e1/3b/76/e13b7679ddbd7b55c137d19f5836b89d.jpg',
+                    alt: 'Mona Lisa Bild (Mit Bearbeitung)',
+                }
+            ],
+            rating: 5,
+            interactions: ['zoom',  'highlight'],
+            comments: [],
         },
         {
             title: 'POV Mona',
@@ -57,12 +84,7 @@ export const useAssets = () => {
             ],
             categories: ['Bild', 'Frau', 'Fenster', 'Antik'],
             rating: 5,
-            interactions: {
-                zoom: true,
-                compare: false,
-                highlight: false,
-                speed: false
-            },
+            interactions: ['zoom', 'compare', 'highlight'],
             comments: [
                 {
                     date: '2021-01-01',
@@ -89,12 +111,7 @@ export const useAssets = () => {
                 }
             ],
             rating: 4,
-            interactions: {
-                zoom: false,
-                compare: true,
-                highlight: false,
-                speed: true
-            },
+            interactions: ['zoom', 'speed'],
             comments: []
         }
     ].map((asset) => {

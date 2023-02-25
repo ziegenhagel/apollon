@@ -1,10 +1,27 @@
 .gallery {
     /* display 5 items per row */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     width: 100vw;
     padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview {
+    flex: 1;
+}
+
+.page-interaction .gallery {
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .gallery > * {
@@ -85,7 +102,7 @@ button {
 
 button:hover {
     background: #0008;
-    scale: 1.1;
+    /* scale: 1.1; */
 }
 
 button:active, button.selected {

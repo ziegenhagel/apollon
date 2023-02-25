@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="'page page-'+route.path.substring(1)" :key="route.path">
     <NavBar/>
     <Start v-if="route.path == '/'"/>
     <Gallery v-if="route.path == '/gallery' || route.path == '/interaction'" :assets="assets"/>

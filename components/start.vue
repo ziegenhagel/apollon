@@ -15,7 +15,7 @@
         </a>
       </li>
       <li>
-        <a target="_blank"
+        <a target="_blank"  
             href="https://github.com/ziegenhagel/apollon">Github Repo</a>
       </li>
     </ul>
