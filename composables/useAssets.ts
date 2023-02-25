@@ -43,7 +43,7 @@ export const useAssets = () => {
             ],
         },
         {
-            title: 'Bild von Frau am Fenster',
+            title: 'POV Mona',
             type: 'image',
             objects: [
                 {

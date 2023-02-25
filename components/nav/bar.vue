@@ -3,10 +3,13 @@
 <template>
   <nav>
     <li>
-      <router-link to="/" :class="{ active: $route.path === '/' }">Galerie</router-link>
+      <router-link to="/" :class="{ active: $route.path === '/' }">Startseite</router-link>
     </li>
     <li>
-      <router-link to="/preview" :class="{ active: $route.path === '/preview' }">Vorschau</router-link>
+      <router-link to="/gallery" :class="{ active: $route.path === '/manage' }">Verwalten</router-link>
+    </li>
+    <li>
+      <router-link to="/interaction" :class="{ active: $route.path === '/interaction' }">Interaktion</router-link>
     </li>
   </nav>
 </template>

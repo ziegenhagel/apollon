@@ -1,8 +1,9 @@
 <template>
   <div>
     <NavBar/>
-    <Gallery :assets="assets"/>
-    <Preview v-if="route.path == '/preview'"/>
+    <Start v-if="route.path == '/'"/>
+    <Gallery v-if="route.path == '/gallery' || route.path == '/interaction'" :assets="assets"/>
+    <Preview v-if="route.path == '/interaction'"/>
   </div>
 </template>
 
