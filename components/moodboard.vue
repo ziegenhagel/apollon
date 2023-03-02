@@ -4,7 +4,7 @@ const assets = useAssets();
 
 <template>
   <div>
-    <div class="gallery cover">
+    <div class="moodboard cover">
       <template v-for="asset in assets">
         <GalleryAsset :asset="asset" :data-favorite="asset.favorite" :data-liked="Math.random() > 0.5"/>
       </template>
@@ -20,7 +20,7 @@ all images have to be visible at once
 dont have empty spots
  */
 
-.gallery {
+.moodboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-rows: minmax(100px, 1fr);
@@ -30,13 +30,13 @@ dont have empty spots
   overflow: auto;
 }
 
-.gallery .asset {
+.moodboard .asset {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.gallery .asset[data-favorite="true"] {
+.moodboard .asset[data-favorite="true"] {
   grid-column: span 2;
   grid-row: span 2;
 }

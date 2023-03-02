@@ -36,19 +36,20 @@
     aspect-ratio: 1/1;
     background-color: #0003;
     position: relative;
-    transition: .2s;
 }
 
 .asset:hover {
-    scale: 1.00;
-    outline: 2px solid orange;
     cursor: pointer;
+}
+
+.asset:hover .object {
 }
 
 .asset .object, .asset .object > * {
     width: 100%;
     height: 100%;
     aspect-ratio: 1/1;
+    transition: .3s;
 }
 
 .asset .object > * {
