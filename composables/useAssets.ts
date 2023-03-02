@@ -29,7 +29,7 @@ export const useAssets = () => {
         },
         {
             title: 'Mona Lisa',
-            type: 'image',
+            type: 'video',
             objects: [
                 {
                     src: 'https://shop.ksta.de/de/upload/Ars_mundi_Leonardo_Da_Vinci_Mona_Lisa001.jpg',

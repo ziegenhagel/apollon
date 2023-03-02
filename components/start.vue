@@ -6,8 +6,9 @@
 
     <h1>Links</h1>
     <ul>
-      <li><a target="_blank"
-          href="https://u3302489.ct.sendgrid.net/ls/click?upn=5jn-2BNVr6mWrJbcZ1z4kro7M6z5QR1ou6Ifo3fveA4shPYrXnf-2B4sMUWkplIxeQQ86bgcXhjpMZsGa0wlDHd3zNVtZEDn-2FZUl6MUElqJ9pKOP-2BO8NxX5ncNhk56a3gElG9p8dBtMNIe1k0LSsAxfODsGBfBdrNyVi-2B1-2BfSPp-2BjtkC6q5S7THZMHCAczVFB0HzHBXEhFaw67m988FEGBDJkPCFryP63IqwueaEtNFwBkQi9QFrz8NM-2Bw-2FnzhsQgMPQvBtgXbd52t9EqttyBVpGsw-3D-3DU9_u_-2FF4MdHYoZoRRCmsryS2zj1Rb0D7cP93DA6Zhdw-2F3urmTcNG3fNiLWQWDL2P1YGNoMGzWYyoJ4bHeOl8YKoucuSu34CXkzQxgu-2Fs1gwKHMnXDPHlgaQlWHv4Sn1uvTi2p6Ahk8bOp0o9hovdv6ywufqYd7kJYlbxbmJhnYawItMGf-2FVSyaa1dmLcvBNzk6lXMU-2FSE-2BrFfRDAi-2BXG85hXaRaafKYinf0HvR-2BuGJlWnYp7xWtwSmm6WEyjhnNcqe6Is">Figma</a>
+      <li>
+        <a target="_blank"
+           href="https://docs.google.com/document/d/1Xj4HsIdfqqK7iLtjFm2xdwfT8opRMMfEh47OX3MdFTM/edit?usp=sharing">Dokumentation</a>
       </li>
       <li>
         <a target="_blank"
@@ -17,6 +18,13 @@
       <li>
         <a target="_blank"  
             href="https://github.com/ziegenhagel/apollon">Github Repo</a>
+      </li>
+      <li>
+        <a target="_blank"
+            href="https://miro.com/app/board/uXjVPiXv-_0=/">Miro Board</a>
+      </li>
+      <li><a target="_blank"
+             href="https://u3302489.ct.sendgrid.net/ls/click?upn=5jn-2BNVr6mWrJbcZ1z4kro7M6z5QR1ou6Ifo3fveA4shPYrXnf-2B4sMUWkplIxeQQ86bgcXhjpMZsGa0wlDHd3zNVtZEDn-2FZUl6MUElqJ9pKOP-2BO8NxX5ncNhk56a3gElG9p8dBtMNIe1k0LSsAxfODsGBfBdrNyVi-2B1-2BfSPp-2BjtkC6q5S7THZMHCAczVFB0HzHBXEhFaw67m988FEGBDJkPCFryP63IqwueaEtNFwBkQi9QFrz8NM-2Bw-2FnzhsQgMPQvBtgXbd52t9EqttyBVpGsw-3D-3DU9_u_-2FF4MdHYoZoRRCmsryS2zj1Rb0D7cP93DA6Zhdw-2F3urmTcNG3fNiLWQWDL2P1YGNoMGzWYyoJ4bHeOl8YKoucuSu34CXkzQxgu-2Fs1gwKHMnXDPHlgaQlWHv4Sn1uvTi2p6Ahk8bOp0o9hovdv6ywufqYd7kJYlbxbmJhnYawItMGf-2FVSyaa1dmLcvBNzk6lXMU-2FSE-2BrFfRDAi-2BXG85hXaRaafKYinf0HvR-2BuGJlWnYp7xWtwSmm6WEyjhnNcqe6Is">Figma Prototyp (Kat)</a>
       </li>
     </ul>
   </div>
