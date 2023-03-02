@@ -4,6 +4,7 @@
     <Start v-if="route.path == '/'"/>
     <Gallery v-if="route.path == '/gallery' || route.path == '/interaction'" :assets="assets"/>
     <Preview v-if="route.path == '/interaction'"/>
+    <Moodboard v-if="route.path == '/moodboard'"/>
   </div>
 </template>
 

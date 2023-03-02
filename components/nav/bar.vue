@@ -11,6 +11,9 @@
     <li>
       <router-link to="/interaction" :class="{ active: $route.path === '/interaction' }">Interaktion</router-link>
     </li>
+    <li>
+      <router-link to="/moodboard" :class="{ active: $route.path === '/moodboard' }">Moodboard</router-link>
+    </li>
   </nav>
 </template>
 

@@ -27,5 +27,3 @@ defineProps<{
   asset: Asset;
 }>();
 </script>
-
-<style scoped></style>
