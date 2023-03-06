@@ -21,7 +21,7 @@
 }
 
 .page-interaction .gallery {
-    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
 }
 
 
@@ -52,12 +52,17 @@
     transition: .3s;
 }
 
-.asset .object > * {
+.object-fit-contain .asset .object > * {
     object-fit: contain;
 }
 
+.object-fit-cover .asset .object > * {
+    object-fit: cover;
+}
+
+
 .cover .asset .object > * {
-    object-fit: cover   ;
+    object-fit: cover;
 }
 
 .asset .caption {
