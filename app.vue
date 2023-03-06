@@ -1,5 +1,5 @@
 <template>
-  <div :class="'page page-'+route.path.substring(1)+' object-fit-'+toolbar.objectFit"
+  <div v-if="false" :class="'page page-'+route.path.substring(1)+' object-fit-'+toolbar.objectFit"
        :key="route.path">
     <NavBar/>
 
@@ -8,6 +8,9 @@
     <Gallery :key="toolbar.columns" v-else-if="route.path == '/gallery'" :assets="assets"/>
     <Preview :key="toolbar.columns" v-else-if="route.path == '/preview'"/>
 
+  </div>
+  <div v-else>
+    <Transition-Test/>
   </div>
 </template>
 
