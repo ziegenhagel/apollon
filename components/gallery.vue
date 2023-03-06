@@ -1,7 +1,9 @@
 <template>
   <div class="gallery">
     <GalleryAsset @click="selectAsset(asset)" v-for="asset in assets" :asset="asset"
-                  :class="{selected: isSelected(asset)}"/>
+                  @dblclick="previewAsset(asset)"
+                  :class=" {selected: isSelected(asset)}
+    "/>
   </div>
 </template>
 
@@ -11,7 +13,6 @@ const selectedAssets = computed(() => {
 });
 
 const selectAsset = (asset: Asset) => {
-
 
   // if shift is pressed, select all assets between the last selected asset and the current asset
   if (event.shiftKey && selectedAssets.value.length > 0) {
@@ -38,6 +39,12 @@ const isSelected = (asset: Asset) => {
 const props = defineProps<{
   assets: Asset[];
 }>();
+
+const router = useRouter();
+const previewAsset = (asset: Asset) => {
+  router.push({path: '/preview'});
+};
 </script>
+
 
 

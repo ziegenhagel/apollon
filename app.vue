@@ -2,10 +2,10 @@
   <div :class="'page page-'+route.path.substring(1)+' object-fit-'+toolbar.objectFit"
        :key="route.path">
     <NavBar/>
-    <Gallery :key="toolbar.columns" v-if="route.path == '/gallery' || route.path == '/interaction'" :assets="assets"/>
-    <Preview :key="toolbar.columns" v-if="route.path == '/interaction'"/>
-    <Moodboard v-if="route.path == '/moodboard'"/>
     <Start v-if="route.path == '/'"/>
+    <Moodboard v-else-if="route.path == '/moodboard'"/>
+    <Gallery :key="toolbar.columns" v-else-if="route.path == '/gallery'" :assets="assets"/>
+    <Preview :key="toolbar.columns" v-else-if="route.path == '/preview'"/>
   </div>
 </template>
 

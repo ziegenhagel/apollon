@@ -3,10 +3,13 @@
     <template v-if="selectedAsset == null"><p>Kein Asset ausgewählt.</p></template>
     <template v-else>
       <main>
+        {{ selectedAsset }}
+        sele
         <PreviewInteraction :asset="selectedAsset" :interaction="selectedInteraction"/>
       </main>
       <aside>
         <PreviewInteractionButton v-for="interaction in interactions" :interaction="interaction"
+                                  :asset="selectedAsset"
                                   @click="selectInteraction(interaction)"/>
       </aside>
     </template>
@@ -14,12 +17,21 @@
 </template>
 
 <script lang="ts" setup>
-const selectedAsset = useState<Asset | null>('asset');
-const selectedInteraction = useState<Interaction | null>('interaction');
-const interactions = useInteractions();
+const assets = useAssets()
+const selectedAssets = computed(() => assets.value.filter(asset => asset.selected))
+const selectedAsset = computed(() => {
+  if (selectedAssets.value.length == 1) {
+    return selectedAssets.value[0];
+  } else {
+    return null;
+  }
+});
+
+const interactions = useInteractions()
+const selectedInteraction = useState<Interaction | null>('interaction')
 const selectInteraction = (interaction: Interaction) => {
   selectedInteraction.value = interaction;
-};
+}
 </script>
 
 <style scoped>

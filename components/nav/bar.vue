@@ -26,7 +26,22 @@ const selectedAssets = computed(() => {
 </script>
 
 <template>
-  <nav id="toolbar">
+  <nav id="tabs">
+    <li>
+      <router-link to="/" :class="{ active: $route.path === '/' }">Startseite</router-link>
+    </li>
+    <li>
+      <router-link to="/moodboard" :class="{ active: $route.path === '/moodboard' }">Moodboard</router-link>
+    </li>
+    <li>
+      <router-link to="/gallery" :class="{ active: $route.path === '/gallery' }">Gallery</router-link>
+    </li>
+    <li>
+      <router-link to="/preview" :class="{ active: $route.path === '/preview' }">Preview</router-link>
+    </li>
+  </nav>
+
+  <nav id="toolbar" v-if="$route.path == '/gallery'">
     <li @click="toggleObjectFit()">
       <svg v-if="toolbar.objectFit == 'contain'" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
            viewBox="0 0 20 20">
@@ -64,20 +79,7 @@ const selectedAssets = computed(() => {
       </svg>
     </li>
   </nav>
-  <nav id="tabs">
-    <li>
-      <router-link to="/" :class="{ active: $route.path === '/' }">Startseite</router-link>
-    </li>
-    <li>
-      <router-link to="/gallery" :class="{ active: $route.path === '/manage' }">Verwalten</router-link>
-    </li>
-    <li>
-      <router-link to="/interaction" :class="{ active: $route.path === '/interaction' }">Interaktion</router-link>
-    </li>
-    <li>
-      <router-link to="/moodboard" :class="{ active: $route.path === '/moodboard' }">Moodboard</router-link>
-    </li>
-  </nav>
+
 </template>
 
 <style scoped>
