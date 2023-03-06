@@ -2,7 +2,7 @@ export const useAssets = () => {
     let id: number = 0
 
     let assets = [];
-    for (let i = 1; i <= 145; i++) {
+    for (let i = 1; i <= 140; i++) { // 145
 
         let objects = [];
         for (let j = 0; j <= 2; j++) {

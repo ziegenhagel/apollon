@@ -3,15 +3,18 @@
        :key="route.path">
     <NavBar/>
 
-    <Start v-if="route.path == '/'"/>
-    <Moodboard v-else-if="route.path == '/moodboard'"/>
-    <Gallery :key="toolbar.columns" v-else-if="route.path == '/gallery'" :assets="assets"/>
-    <Preview :key="toolbar.columns" v-else-if="route.path == '/preview'"/>
+    <Transition>
+      <Start v-if="page == '/'"/>
+      <Moodboard v-else-if="page == '/moodboard'"/>
+      <Gallery :key="toolbar.columns" v-else-if="page == '/gallery'" :assets="assets"/>
+      <Preview :key="toolbar.columns" v-else-if="page == '/preview'"/>
+    </Transition>
 
   </div>
 </template>
 
 <script setup>
+const page = useState('page', '/');
 const assets = useAssets();
 const route = useRoute();
 const toolbar = useToolbar()
