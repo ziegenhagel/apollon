@@ -103,7 +103,7 @@ svg {
 button {
     background: #0004;
     border-radius: 50%;
-    border: 2px outset #000;
+    border: 1px outset #000;
     color: #fff;
     padding: 1em;
     cursor: pointer;
@@ -161,4 +161,14 @@ a {
 
 .text p {
     line-height: 1.5em;
+}
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }

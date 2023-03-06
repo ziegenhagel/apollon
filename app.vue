@@ -2,10 +2,12 @@
   <div :class="'page page-'+route.path.substring(1)+' object-fit-'+toolbar.objectFit"
        :key="route.path">
     <NavBar/>
+
     <Start v-if="route.path == '/'"/>
     <Moodboard v-else-if="route.path == '/moodboard'"/>
     <Gallery :key="toolbar.columns" v-else-if="route.path == '/gallery'" :assets="assets"/>
     <Preview :key="toolbar.columns" v-else-if="route.path == '/preview'"/>
+
   </div>
 </template>
 
@@ -13,7 +15,7 @@
 const assets = useAssets();
 const route = useRoute();
 const toolbar = useToolbar()
-const toolbar_columns = computed(() => toolbar.value.columns)
+// const toolbar_columns = computed(() => toolbar.value.columns)
 </script>
 
 <style>
@@ -28,6 +30,6 @@ body, html {
 }
 
 .gallery {
-  grid-template-columns: repeat(v-bind('toolbar_columns'), 1fr);
+  grid-template-columns: repeat(v-bind('toolbar.columns'), 1fr);
 }
 </style>

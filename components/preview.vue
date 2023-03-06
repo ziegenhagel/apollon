@@ -4,10 +4,13 @@
     <template v-else>
       <main>
         {{ selectedAsset }}
-        sele
         <PreviewInteraction :asset="selectedAsset" :interaction="selectedInteraction"/>
       </main>
       <aside>
+        <button class="enabled">Info</button>
+        <button class="enabled">Notiz</button>
+        <button class="enabled">Tags</button>
+        <hr/>
         <PreviewInteractionButton v-for="interaction in interactions" :interaction="interaction"
                                   :asset="selectedAsset"
                                   @click="selectInteraction(interaction)"/>
